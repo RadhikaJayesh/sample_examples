@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<style>
+    #wrapper {
+        counter-reset: counterBlock;
+    }
+
+    #wrapper a {
+        display: block;
+    }
+
+    #wrapper a::before {
+        counter-increment: counterBlock;
+        content: "Link "counter(counterBlock) "--";
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <div id="wrapper">
+            <a class="listItem">Click here</a>
+            <a class="listItem">Click here</a>
+        </div>
+        <div>
+            <ul id="listContainer"></ul>
+        </div>
+        <div id="example"></div>
+        <select id="selectList">
+            <option>Val 1</option>
+            <option>Val 2</option>
+            <option>Val 3</option>
+            <option>Val 4</option>
+            <option>Val 5</option>
+        </select>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
